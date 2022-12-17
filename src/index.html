@@ -9,6 +9,16 @@
 <body>
     <main>
         <h1>こんにちは。これはAzure Static Web Appsのサンプルアプリです</h1>
+        <p>APIからの戻り値 : <b id="message"></b></p>
     </main>
+
+    <script>
+        (async function () {
+            const response = await fetch('api/message');
+            const message = await response.json();
+
+            document.querySelector('#message').innerHTML = message.text
+        })
+    </script>
 </body>
 </html>

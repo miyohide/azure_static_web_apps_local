@@ -1,4 +1,6 @@
 import { useState, useEffect } from "react";
+import Home from './routes/Home';
+import About from './routes/About';
 
 function App() {
   const [data, setData] = useState('');
@@ -16,6 +18,8 @@ function App() {
         <h1>これはAzure Static Web Appsのサンプルです。</h1>
         <p>APIからの返り値 : <b>{data}</b></p>
       </header>
+      <Home />
+      <About />
     </div>
   );
 }

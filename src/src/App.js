@@ -1,4 +1,4 @@
-import { Routes, Route } from "react-router-dom";
+import { Routes, Route, Link } from "react-router-dom";
 import { useState, useEffect } from "react";
 import Home from './routes/Home';
 import About from './routes/About';
@@ -22,10 +22,10 @@ function App() {
       </header>
       <ul>
         <li>
-          <a href="/">Home</a>
+          <Link to="/">Home</Link>
         </li>
         <li>
-          <a href="/about">About</a>
+          <Link to="/about">About</Link>
         </li>
       </ul>
       <Routes>

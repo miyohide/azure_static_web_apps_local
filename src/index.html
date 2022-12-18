@@ -14,8 +14,8 @@
 
     <script>
         (async function () {
-            let response = await fetch(`api/message`);
-            let message = await response.json();
+            const response = await fetch('/api/message');
+            const message = await response.json();
 
             document.querySelector('#message').innerHTML = message.text
         })();

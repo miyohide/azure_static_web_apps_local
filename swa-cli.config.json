@@ -4,8 +4,11 @@
     "azure-static-web-apps-local": {
       "appLocation": "src",
       "apiLocation": "api",
-      "outputLocation": ".",
-      "apiBuildCommand": "npm run build --if-present"
+      "outputLocation": "build",
+      "appBuildCommand": "npm run build",
+      "apiBuildCommand": "npm run build --if-present",
+      "run": "npm start",
+      "appDevserverUrl": "http://localhost:3000"
     }
   }
 }

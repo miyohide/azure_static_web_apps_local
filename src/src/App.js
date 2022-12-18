@@ -20,6 +20,14 @@ function App() {
         <h1>これはAzure Static Web Appsのサンプルです。</h1>
         <p>APIからの返り値 : <b>{data}</b></p>
       </header>
+      <ul>
+        <li>
+          <a href="/">Home</a>
+        </li>
+        <li>
+          <a href="/about">About</a>
+        </li>
+      </ul>
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/about" element={<About />} />

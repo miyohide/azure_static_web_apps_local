@@ -3,6 +3,7 @@ import { useState, useEffect } from "react";
 import Home from './routes/Home';
 import About from './routes/About';
 import NoMatch from "./routes/NoMatch";
+import NavBar from "./NavBar";
 
 function App() {
   const [message, setMessage] = useState('');
@@ -36,19 +37,18 @@ function App() {
   return (
     <div className="App">
       <header className="App-header">
+        <NavBar user={user} />
+      </header>
+      <main>
         <h1>これはAzure Static Web Appsのサンプルです。</h1>
         <p>APIからのメッセージ : <b>{message}</b></p>
-        <p>User : {user?.userDetails}</p>
-      </header>
+      </main>
       <ul>
         <li>
           <Link to="/">Home</Link>
         </li>
         <li>
           <Link to="/about">About</Link>
-        </li>
-        <li>
-          <a href="/.auth/login/github">GitHub Login</a>
         </li>
       </ul>
       <Routes>

@@ -1,8 +1,4 @@
-import { Routes, Route } from "react-router-dom";
 import { useState, useEffect } from "react";
-import Home from './routes/Home';
-import About from './routes/About';
-import NoMatch from "./routes/NoMatch";
 import NavBar from "./NavBar";
 
 function App() {
@@ -43,11 +39,6 @@ function App() {
         <h1>これはAzure Static Web Appsのサンプルです。</h1>
         <p>APIからのメッセージ : <b>{message}</b></p>
       </main>
-      <Routes>
-        <Route path="/" element={<Home />} />
-        <Route path="/about" element={<About />} />
-        <Route path="*" element={<NoMatch />} />
-      </Routes>
     </div>
   );
 }

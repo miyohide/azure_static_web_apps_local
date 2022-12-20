@@ -1,4 +1,4 @@
-import { Routes, Route, Link } from "react-router-dom";
+import { Routes, Route } from "react-router-dom";
 import { useState, useEffect } from "react";
 import Home from './routes/Home';
 import About from './routes/About';
@@ -43,14 +43,6 @@ function App() {
         <h1>これはAzure Static Web Appsのサンプルです。</h1>
         <p>APIからのメッセージ : <b>{message}</b></p>
       </main>
-      <ul>
-        <li>
-          <Link to="/">Home</Link>
-        </li>
-        <li>
-          <Link to="/about">About</Link>
-        </li>
-      </ul>
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/about" element={<About />} />

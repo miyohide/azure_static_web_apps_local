@@ -3,17 +3,10 @@ import { Link } from "react-router-dom";
 const NavBar = ({user}) => {
   return (
     <>
-    {!user && (
-      <span><a href="/.auth/login/github">GitHub Login</a></span>
-    )}
-    {user && (
-      <div>
-        <p>
-          <span>{user && user?.userDetails}</span>
-          <span> <a href="/.auth/logout">Logout</a></span>
-        </p>
-      </div>
-    )}
+      { !user ?
+        <span><a href="/.auth/login/github">GitHub Login</a></span> :
+        <div><p><span>{user.userDetails}</span><span> <a href="/.auth/logout">Logout</a></span></p></div>
+      }
     <ul>
       <li>
         <Link to="/">Home</Link>

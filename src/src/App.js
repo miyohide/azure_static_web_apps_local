@@ -1,5 +1,5 @@
-import { useState, useEffect } from "react";
-import NavBar from "./NavBar";
+import {useState, useEffect} from 'react';
+import NavBar from './NavBar';
 
 function App() {
   const [message, setMessage] = useState('');
@@ -16,7 +16,7 @@ function App() {
     try {
       const response = await fetch('/.auth/me');
       const payload = await response.json();
-      const { clientPrincipal } = payload;
+      const {clientPrincipal} = payload;
 
       if (clientPrincipal) {
         setUser(clientPrincipal);
@@ -28,12 +28,12 @@ function App() {
   }
 
   async function getMessage() {
-    const { text } = await( await fetch('/api/message')).json();
+    const {text} = await( await fetch('/api/message')).json();
     setMessage(text);
   }
 
   async function getMessage2() {
-    const { text } = await( await fetch('/api/message2')).json();
+    const {text} = await( await fetch('/api/message2')).json();
     setMessage2(text);
   }
 

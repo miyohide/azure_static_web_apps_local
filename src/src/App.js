@@ -3,11 +3,13 @@ import NavBar from "./NavBar";
 
 function App() {
   const [message, setMessage] = useState('');
+  const [message2, setMessage2] = useState('');
   const [user, setUser] = useState(null);
 
   useEffect(() => {
     getUserInfo();
     getMessage();
+    getMessage2();
   }, []);
 
   async function getUserInfo() {
@@ -30,6 +32,11 @@ function App() {
     setMessage(text);
   }
 
+  async function getMessage2() {
+    const { text } = await( await fetch('/api/message2')).json();
+    setMessage2(text);
+  }
+
   return (
     <div className="App">
       <header className="App-header">
@@ -38,6 +45,7 @@ function App() {
       <main>
         <h1>これはAzure Static Web Appsのサンプルです。</h1>
         <p>APIからのメッセージ : <b>{message}</b></p>
+        <p>APIからのメッセージ その2 : <b>{message2}</b></p>
       </main>
     </div>
   );

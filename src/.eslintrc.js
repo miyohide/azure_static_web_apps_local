@@ -18,5 +18,7 @@ module.exports = {
     'react',
   ],
   'rules': {
+    'require-jsdoc': 'off',
+    'react/prop-types': 'off'
   },
 };

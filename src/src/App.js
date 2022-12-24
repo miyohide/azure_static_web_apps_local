@@ -43,7 +43,7 @@ function App() {
         <NavBar user={user} />
       </header>
       <main>
-        <h1>これはAzure Static Web Appsのサンプルです。</h1>
+        <h1>これはAzure Static Web Appsのサンプルです。 Preview!!!</h1>
         <p>APIからのメッセージ : <b>{message}</b></p>
         <p>APIからのメッセージ その2 : <b>{message2}</b></p>
       </main>

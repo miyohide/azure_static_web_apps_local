@@ -22,6 +22,7 @@ const NavBar = ({user}) => {
 };
 
 NavBar.propTypes = {
+  // TODO: PropTypes.objectは結局なんでも受け入れてしまうため要改善
   user: PropTypes.object
 };
 

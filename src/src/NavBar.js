@@ -6,8 +6,8 @@ const NavBar = ({user}) => {
   return (
     <>
       { !user ?
-        <span><a href="/.auth/login/github">GitHub Login</a></span> :
-        <div><p><span>{user.userDetails}</span><span> <a href="/.auth/logout">Logout</a></span></p></div>
+        <span><a href="/login">GitHub Login</a></span> :
+        <div><p><span>{user.userDetails}</span><span> <a href="/logout">Logout</a></span></p></div>
       }
       <ul>
         <li>

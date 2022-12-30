@@ -6,6 +6,8 @@
     "start": "func start",
     "test": "echo \"No tests yet...\""
   },
-  "dependencies": {},
-  "devDependencies": {}
+  "devDependencies": {
+    "eslint": "^8.30.0",
+    "prettier": "^2.8.1"
+  }
 }

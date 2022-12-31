@@ -3,11 +3,17 @@ module.exports = {
     es2021: true,
     node: true,
   },
-  extends: ["eslint:recommended", "google", "prettier"],
+  extends: [
+    "plugin:jsdoc/recommended",
+    "eslint:recommended",
+    "google",
+    "prettier",
+  ],
   overrides: [],
   parserOptions: {
     ecmaVersion: "latest",
     sourceType: "module",
   },
+  plugins: ["jsdoc"],
   rules: {},
 };

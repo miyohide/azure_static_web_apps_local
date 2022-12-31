@@ -1,9 +1,9 @@
-import React, {useState, useEffect} from 'react';
-import NavBar from './NavBar';
+import React, { useState, useEffect } from "react";
+import NavBar from "./NavBar";
 
 function App() {
-  const [message, setMessage] = useState('');
-  const [message2, setMessage2] = useState('');
+  const [message, setMessage] = useState("");
+  const [message2, setMessage2] = useState("");
   const [user, setUser] = useState(null);
 
   useEffect(() => {
@@ -14,26 +14,26 @@ function App() {
 
   async function getUserInfo() {
     try {
-      const response = await fetch('/.auth/me');
+      const response = await fetch("/.auth/me");
       const payload = await response.json();
-      const {clientPrincipal} = payload;
+      const { clientPrincipal } = payload;
 
       if (clientPrincipal) {
         setUser(clientPrincipal);
         console.log(`clientPrincipal = ${JSON.stringify(clientPrincipal)}`);
       }
     } catch (error) {
-      console.error('No profile could be found ' + error?.message?.toString());
+      console.error("No profile could be found " + error?.message?.toString());
     }
   }
 
   async function getMessage() {
-    const {text} = await( await fetch('/api/message')).json();
+    const { text } = await (await fetch("/api/message")).json();
     setMessage(text);
   }
 
   async function getMessage2() {
-    const {text} = await( await fetch('/api/message2')).json();
+    const { text } = await (await fetch("/api/message2")).json();
     setMessage2(text);
   }
 
@@ -44,8 +44,12 @@ function App() {
       </header>
       <main>
         <h1>これはAzure Static Web Appsのサンプルです。</h1>
-        <p>APIからのメッセージ : <b>{message}</b></p>
-        <p>APIからのメッセージ その2 : <b>{message2}</b></p>
+        <p>
+          APIからのメッセージ : <b>{message}</b>
+        </p>
+        <p>
+          APIからのメッセージ その2 : <b>{message2}</b>
+        </p>
       </main>
     </div>
   );

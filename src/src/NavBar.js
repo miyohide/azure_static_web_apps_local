@@ -2,6 +2,11 @@ import React from "react";
 import { Link } from "react-router-dom";
 import PropTypes from "prop-types";
 
+/**
+ * Userログイン情報を受け取り、各ページの上部に表示するコンポーネントを返します
+ * @param {Object} user Userログイン情報
+ * @returns 各ページの上部に表示するコンポーネントを返します
+ */
 const NavBar = ({ user }) => {
   return (
     <>
